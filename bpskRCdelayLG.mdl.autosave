@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 0.0, 1920.0, 1047.0]
+      Location		      [0.0, 420.0, 1920.0, 1047.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,7 +53,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1886.0, 865.0]
+	Extents			[1886.0, 870.0]
 	ZoomFactor		[1.0]
 	Offset			[259.96082607422636, 108.17619047619053]
       }
@@ -66,7 +66,7 @@ Model {
   LastModifiedBy	  "tim"
   ModifiedDateFormat	  "%<Auto>"
   LastModifiedDate	  "Sat Oct 10 22:00:39 2015"
-  RTWModifiedTimeStamp	  366415315
+  RTWModifiedTimeStamp	  366455423
   ModelVersionFormat	  "1.%<AutoIncrement:41>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
@@ -1374,12 +1374,6 @@ Model {
       PreserveConstantTs      off
     }
     Block {
-      BlockType		      Demux
-      Outputs		      "4"
-      DisplayOption	      "none"
-      BusSelectionMode	      off
-    }
-    Block {
       BlockType		      Display
       Format		      "short"
       Decimation	      "10"
@@ -1409,81 +1403,6 @@ Model {
       TagVisibility	      "local"
     }
     Block {
-      BlockType		      Inport
-      Port		      "1"
-      OutputFunctionCall      off
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
-      BusOutputAsStruct	      off
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      LatchByDelayingOutsideSignal off
-      LatchInputForFeedbackSignals off
-      Interpolate	      on
-    }
-    Block {
-      BlockType		      Outport
-      Port		      "1"
-      OutMin		      "[]"
-      OutMax		      "[]"
-      OutDataTypeStr	      "Inherit: auto"
-      LockScale		      off
-      BusOutputAsStruct	      off
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      SourceOfInitialOutputValue "Dialog"
-      OutputWhenDisabled      "held"
-      InitialOutput	      "[]"
-    }
-    Block {
-      BlockType		      S-Function
-      FunctionName	      "system"
-      SFunctionModules	      "''"
-      PortCounts	      "[]"
-    }
-    Block {
-      BlockType		      SubSystem
-      ShowPortLabels	      "FromPortIcon"
-      Permissions	      "ReadWrite"
-      PermitHierarchicalResolution "All"
-      TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      CheckFcnCallInpInsideContextMsg off
-      SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
-      RTWFcnNameOpts	      "Auto"
-      RTWFileNameOpts	      "Auto"
-      FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      SimViewingDevice	      off
-      DataTypeOverride	      "UseLocalSettings"
-      DataTypeOverrideAppliesTo	"AllNumericTypes"
-      MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
-      SFBlockType	      "NONE"
-      GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
-      IsWebBlock	      off
-    }
-    Block {
-      BlockType		      Terminator
-    }
-    Block {
       BlockType		      ToWorkspace
       VariableName	      "simulink_output"
       MaxDataPoints	      "1000"
@@ -1497,7 +1416,7 @@ Model {
   }
   System {
     Name		    "bpskRCdelayLG"
-    Location		    [0, 0, 1920, 1047]
+    Location		    [0, 420, 1920, 1467]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1511,7 +1430,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "39"
+    SIDHighWatermark	    "38"
     Block {
       BlockType		      Reference
       Name		      "AWGN\nChannel"
@@ -1581,14 +1500,6 @@ Model {
       Value		      "delay"
     }
     Block {
-      BlockType		      Constant
-      Name		      "Constant1"
-      SID		      "39"
-      Position		      [1285, 395, 1315, 425]
-      ZOrder		      38
-      Value		      "40"
-    }
-    Block {
       BlockType		      Display
       Name		      "Display"
       SID		      "8"
@@ -1601,15 +1512,15 @@ Model {
       BlockType		      Reference
       Name		      "Error Rate\nCalculation"
       SID		      "6"
-      Ports		      [3, 1]
-      Position		      [1820, 212, 1900, 278]
+      Ports		      [2, 1]
+      Position		      [1775, 204, 1855, 271]
       ZOrder		      6
       LibraryVersion	      "1.340"
       SourceBlock	      "commsink2/Error Rate\nCalculation"
       SourceType	      "Error Rate Calculation"
       N			      "0"
       st_delay		      "0"
-      cp_mode		      "Select samples from port"
+      cp_mode		      "Entire frame"
       subframe		      "[]"
       PMode		      "Port"
       WsName		      "ErrorVec"
@@ -1644,159 +1555,6 @@ Model {
       Position		      [220, 375, 260, 405]
       ZOrder		      30
       IconDisplay	      "Signal name"
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "MATLAB Function"
-      SID		      "38"
-      Ports		      [2, 2]
-      Position		      [1475, 233, 1600, 277]
-      ZOrder		      37
-      LibraryVersion	      "1.32"
-      ErrorFcn		      "Stateflow.Translate.translate"
-      PermitHierarchicalResolution "ExplicitOnly"
-      TreatAsAtomicUnit	      on
-      RequestExecContextInheritance off
-      SFBlockType	      "MATLAB Function"
-      Variant		      off
-      System {
-	Name			"MATLAB Function"
-	Location		[223, 338, 826, 833]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	SIDHighWatermark	"20"
-	Block {
-	  BlockType		  Inport
-	  Name			  "var"
-	  SID			  "38::1"
-	  Position		  [20, 101, 40, 119]
-	  ZOrder		  -1
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "usefulSize"
-	  SID			  "38::20"
-	  Position		  [20, 136, 40, 154]
-	  ZOrder		  11
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Demux
-	  Name			  " Demux "
-	  SID			  "38::17"
-	  Ports			  [1, 1]
-	  Position		  [270, 230, 320, 270]
-	  ZOrder		  8
-	  Outputs		  "1"
-	}
-	Block {
-	  BlockType		  S-Function
-	  Name			  " SFunction "
-	  SID			  "38::16"
-	  Tag			  "Stateflow S-Function bpskRCdelayLG 2"
-	  Ports			  [2, 3]
-	  Position		  [180, 100, 230, 180]
-	  ZOrder		  7
-	  FunctionName		  "sf_sfun"
-	  PortCounts		  "[2 3]"
-	  SFunctionDeploymentMode off
-	  EnableBusSupport	  on
-	  Port {
-	    PortNumber		    2
-	    Name		    "fix"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	  Port {
-	    PortNumber		    3
-	    Name		    "useful"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  " Terminator "
-	  SID			  "38::18"
-	  Position		  [460, 241, 480, 259]
-	  ZOrder		  9
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "fix"
-	  SID			  "38::5"
-	  Position		  [460, 101, 480, 119]
-	  ZOrder		  -5
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "useful"
-	  SID			  "38::19"
-	  Position		  [460, 136, 480, 154]
-	  ZOrder		  10
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  14
-	  SrcBlock		  "var"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  15
-	  SrcBlock		  "usefulSize"
-	  SrcPort		  1
-	  DstBlock		  " SFunction "
-	  DstPort		  2
-	}
-	Line {
-	  Name			  "fix"
-	  ZOrder		  16
-	  Labels		  [0, 0]
-	  SrcBlock		  " SFunction "
-	  SrcPort		  2
-	  DstBlock		  "fix"
-	  DstPort		  1
-	}
-	Line {
-	  Name			  "useful"
-	  ZOrder		  17
-	  Labels		  [0, 0]
-	  SrcBlock		  " SFunction "
-	  SrcPort		  3
-	  DstBlock		  "useful"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  18
-	  SrcBlock		  " Demux "
-	  SrcPort		  1
-	  DstBlock		  " Terminator "
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  19
-	  SrcBlock		  " SFunction "
-	  SrcPort		  1
-	  DstBlock		  " Demux "
-	  DstPort		  1
-	}
-      }
     }
     Block {
       BlockType		      Reference
@@ -1990,17 +1748,16 @@ Model {
       ZOrder		      9
       SrcBlock		      "Error Rate\nCalculation"
       SrcPort		      1
-      Points		      [58, 0]
+      Points		      [103, 0]
       Branch {
-	ZOrder			165
-	Points			[0, -5]
-	DstBlock		"To Workspace"
+	ZOrder			178
+	Points			[0, 85]
+	DstBlock		"Display"
 	DstPort			1
       }
       Branch {
-	ZOrder			101
-	Points			[0, 80]
-	DstBlock		"Display"
+	ZOrder			165
+	DstBlock		"To Workspace"
 	DstPort			1
       }
     }
@@ -2057,41 +1814,18 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      161
-      SrcBlock		      "BPSK\nDemodulator\nBaseband"
-      SrcPort		      1
-      Points		      [165, 0]
-      DstBlock		      "MATLAB Function"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      135
       SrcBlock		      "From"
       SrcPort		      1
-      Points		      [9, 0; 0, 110]
+      Points		      [9, 0; 0, 105]
       DstBlock		      "Error Rate\nCalculation"
       DstPort		      1
     }
     Line {
-      ZOrder		      162
-      SrcBlock		      "MATLAB Function"
+      ZOrder		      179
+      SrcBlock		      "BPSK\nDemodulator\nBaseband"
       SrcPort		      1
       DstBlock		      "Error Rate\nCalculation"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      164
-      SrcBlock		      "MATLAB Function"
-      SrcPort		      2
-      DstBlock		      "Error Rate\nCalculation"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      167
-      SrcBlock		      "Constant1"
-      SrcPort		      1
-      Points		      [75, 0; 0, -145]
-      DstBlock		      "MATLAB Function"
       DstPort		      2
     }
   }
@@ -2153,181 +1887,11 @@ Stateflow {
     name		    "bpskRCdelayLG"
     created		    "10-Oct-2015 21:50:42"
     isLibrary		    0
-    firstTarget		    11
+    firstTarget		    2
     sfVersion		    80000006
   }
-  chart {
-    id			    2
-    name		    "MATLAB Function"
-    windowPosition	    [422 539.941 189 413]
-    viewLimits		    [0 156.75 0 153.75]
-    screen		    [1 1 3600 1200 1.180555555555556]
-    treeNode		    [0 3 0 0]
-    firstTransition	    9
-    firstJunction	    8
-    viewObj		    2
-    visible		    1
-    machine		    1
-    subviewS {
-    }
-    ssIdHighWaterMark	    7
-    decomposition	    CLUSTER_CHART
-    type		    EML_CHART
-    firstData		    4
-    chartFileNumber	    2
-    disableImplicitCasting  1
-    eml {
-      name		      "vartofix"
-    }
-  }
-  state {
-    id			    3
-    labelString		    "eML_blk_kernel()"
-    position		    [18 64.5 118 66]
-    fontSize		    12
-    chart		    2
-    treeNode		    [2 0 0 0]
-    superState		    SUBCHART
-    subviewer		    2
-    ssIdNumber		    1
-    type		    FUNC_STATE
-    decomposition	    CLUSTER_STATE
-    eml {
-      isEML		      1
-      script		      "function [fix,useful] = vartofix(var,usefulSize)\n%#codegen\nuseful = zeros(1000,1);\nfix = zeros"
-      "(1000,1);\nfix(1:usefulSize,1) = var;\nuseful((1:usefulSize),1) = ones(usefulSize,1);\nend"
-      editorLayout	      "100 M4x1[10 5 700 500]"
-    }
-  }
-  data {
-    id			    4
-    ssIdNumber		    4
-    name		    "var"
-    linkNode		    [2 0 5]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-	isDynamic		1
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    5
-    ssIdNumber		    5
-    name		    "fix"
-    linkNode		    [2 4 6]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"[1000,1]"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    6
-    ssIdNumber		    6
-    name		    "useful"
-    linkNode		    [2 5 7]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"[1000,1]"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    7
-    ssIdNumber		    7
-    name		    "usefulSize"
-    linkNode		    [2 6 0]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      range {
-	minimum			"1"
-	maximum			"1000"
-      }
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  junction {
-    id			    8
-    position		    [23.5747 49.5747 7]
-    chart		    2
-    linkNode		    [2 0 0]
-    subviewer		    2
-    ssIdNumber		    3
-    type		    CONNECTIVE_JUNCTION
-  }
-  transition {
-    id			    9
-    labelString		    "{eML_blk_kernel();}"
-    labelPosition	    [28.125 13.875 102.544 14.964]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 23.5747 14.625 0 0]
-    }
-    dst {
-      id		      8
-      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
-    }
-    midPoint		    [23.5747 24.9468]
-    chart		    2
-    linkNode		    [2 0 0]
-    dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    2
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    2
-  }
-  instance {
-    id			    10
-    name		    "MATLAB Function"
-    machine		    1
-    chart		    2
-  }
   target {
-    id			    11
+    id			    2
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1

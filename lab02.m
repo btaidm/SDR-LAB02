@@ -1,4 +1,4 @@
-clear all; 
+clear all;
 close all;
 
 rolloff = .5;
@@ -20,10 +20,6 @@ bMessage = bMessage(:)';
 
 mMessage = bMessage;
 mMessage(mMessage == 0) = -1;
-
-
-Trails = [25 250 2500 25000];
-
 
 in.time = [];
 in.signals.values = bMessage';
